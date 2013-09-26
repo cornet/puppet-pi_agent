@@ -5,7 +5,7 @@ class monit::config (
   $allow          = ['localhost']
 ){
 
-  file {"/etc/monit.conf" :
+  file {"/etc/monit/monitrc" :
     owner   => 'root',
     group   => 'root',
     mode    => '0600',
