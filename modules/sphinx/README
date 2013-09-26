@@ -1,0 +1,16 @@
+# Creating the .debs via FPM:
+
+# sphinxbase
+make install DESTDIR=/home/pi/sphinx_install_tmp/base
+
+# pocketsphinx
+make install DESTDIR=/home/pi/sphinx_install_tmp/pocket
+
+
+fpm -s dir -t deb -n sphinxbase -v 0.8 -C /home/pi/sphinx_install_tmp/base \
+  -p sphinxbase-VERSION_ARCH.deb \
+  usr
+
+fpm -s dir -t deb -n pocketsphinx -v 0.8 -C /home/pi/sphinx_install_tmp/pocket \
+  -p pocketsphinx-VERSION_ARCH.deb \
+  usr
