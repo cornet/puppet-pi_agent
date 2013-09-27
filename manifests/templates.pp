@@ -1,6 +1,7 @@
 class base {
   package {
-    'git-core': ensure       => 'installed';
+    'git-core':       ensure => 'installed';
+    'screen':         ensure => 'installed';
     'libsqlite3-dev': ensure => 'installed';
     # Required to build listener.c
     'libasound2-dev': ensure => 'installed';
