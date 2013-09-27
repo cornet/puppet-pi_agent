@@ -1,6 +1,6 @@
 class monit::service {
 	service { 'monit':
-			ensure => 'running',
-      enable => true,
+			ensure => 'stopped',
+      enable => false,
 	}
 }
